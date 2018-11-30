@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-ene-2015 14:44:58 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.Facprod" table="facprod" catalog="ispercolor">
+        <id name="idfacprod" type="java.lang.Integer">
+            <column name="idfacprod" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="producto" class="pojos.Producto" fetch="select">
+            <column name="idproducto" not-null="true" />
+        </many-to-one>
+        <many-to-one name="factura" class="pojos.Factura" fetch="select">
+            <column name="idfactura" not-null="true" />
+        </many-to-one>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="cantidad" />
+        </property>
+        <property name="importe" type="java.lang.Float">
+            <column name="importe" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-ene-2015 14:44:58 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.Empleado" table="empleado" catalog="ispercolor">
+        <id name="idempleado" type="int">
+            <column name="idempleado" />
+            <generator class="assigned" />
+        </id>
+        <property name="idtienda" type="java.lang.Integer">
+            <column name="idtienda" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="ape1" type="string">
+            <column name="ape1" length="45" />
+        </property>
+        <property name="ape2" type="string">
+            <column name="ape2" length="45" />
+        </property>
+        <property name="dni" type="string">
+            <column name="dni" length="45" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="45" />
+        </property>
+        <property name="movil" type="string">
+            <column name="movil" length="45" />
+        </property>
+        <property name="domicilio" type="string">
+            <column name="domicilio" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-ene-2015 14:44:58 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="pojos.Cliente" table="cliente" catalog="ispercolor">
+        <id name="idcliente" type="java.lang.Integer">
+            <column name="Idcliente" />
+            <generator class="identity" />
+        </id>
+        <property name="dnicliente" type="string">
+            <column name="Dnicliente" length="9" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="45" />
+        </property>
+        <property name="apellido1" type="string">
+            <column name="Apellido1" length="45" />
+        </property>
+        <property name="apellido2" type="string">
+            <column name="Apellido2" length="45" />
+        </property>
+        <property name="fijo" type="string">
+            <column name="Fijo" length="45" />
+        </property>
+        <property name="movil" type="string">
+            <column name="Movil" length="45" />
+        </property>
+        <property name="domicilio" type="string">
+            <column name="Domicilio" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
